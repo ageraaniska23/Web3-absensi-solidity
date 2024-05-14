@@ -10,18 +10,18 @@ import Schedule from './components/schedule/Schedule'
 
 function App() {
   return (
-    <Router>
-      <Sidebar />
-      <div className="main-content">
+    <div>
+      <Router>
+        <Sidebar />
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/Schedule" element={<Schedule />} />
-          <Route path="/Employee" element={<Employee />} />
-        
+          <Route exact path="/" element={<Home />}/>
+          <Route exact path="/Employee" element={<Employee />}/>
+          <Route exact path="/E" element={<Schedule />}/>
         </Routes>
-      </div>
-      <Footer />
-    </Router>
+        <Footer />
+      </Router>
+
+    </div>
   )
 }
 
