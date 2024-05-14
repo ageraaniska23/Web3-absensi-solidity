@@ -5,6 +5,7 @@ import Home from './components/homepage/Home'
 import Footer from './components/footer/Footer'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Employee from './components/Employee/Employee'
+import Schedule from './components/schedule/Schedule'
 
 
 function App() {
@@ -14,13 +15,12 @@ function App() {
         <Sidebar />
         <Routes>
           <Route exact path="/" element={<Home />}/>
-          <Route exact path="/employee" element={<Employee />}/>
+          <Route exact path="/Employee" element={<Employee />}/>
+          <Route exact path="/E" element={<Schedule />}/>
         </Routes>
         <Footer />
       </Router>
-      {/* <Sidebar />
-      <Home />
-      <Footer /> */}
+
     </div>
   )
 }
