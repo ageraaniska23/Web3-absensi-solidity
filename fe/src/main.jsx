@@ -54,13 +54,11 @@ const config = getDefaultConfig({
 const queryClient = new QueryClient();
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <WagmiProvider config={config} >
-      <QueryClientProvider client={queryClient}>
-        <RainbowKitProvider modalSize="compact">
-          <App />
-        </RainbowKitProvider>
-      </QueryClientProvider>
-    </WagmiProvider>
-  </React.StrictMode>
+  <WagmiProvider config={config} >
+    <QueryClientProvider client={queryClient}>
+      <RainbowKitProvider modalSize="compact">
+        <App />
+      </RainbowKitProvider>
+    </QueryClientProvider>
+  </WagmiProvider>
 );
