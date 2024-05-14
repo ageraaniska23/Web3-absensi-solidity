@@ -1,7 +1,8 @@
+// Sidebar.jsx
 import React, { useState } from "react";
+import { Link } from 'react-router-dom';
 import { ConnectButton } from "@rainbow-me/rainbowkit";
 import Theme from "../theme/Theme";
-
 
 const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -28,29 +29,22 @@ const Sidebar = () => {
             strokeLinecap="round"
             strokeLinejoin="round"
             strokeWidth={2}
-            d={
-              isOpen ? "M6 18 17.94 6M18 18 6.06 6" : "M5 7h14M5 12h14M5 17h14"
-            }
+            d={isOpen ? "M6 18 17.94 6M18 18 6.06 6" : "M5 7h14M5 12h14M5 17h14"}
           />
         </svg>
       </button>
       {/* Sidebar */}
       <aside
         id="logo-sidebar"
-        className={`fixed top-0 left-0 z-40 w-64 h-screen transition-transform ${
-          isOpen ? "translate-x-0" : "-translate-x-full"
-        } sm:translate-x-0`}
+        className={`fixed top-0 left-0 z-40 w-64 h-screen transition-transform ${isOpen ? "translate-x-0" : "-translate-x-full"} sm:translate-x-0`}
         aria-label="Sidebar"
       >
         <div className="h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-950">
-          <a
-            // href="https://flowbite.com/"
-            className="flex items-center ps-2.5 mb-5"
-          >
+          <a className="flex items-center ps-2.5 mb-5">
             <img
               src="https://www.svgrepo.com/show/508281/book.svg"
               className="h-6 me-3 sm:h-7"
-              alt=" Logo"
+              alt="Logo"
             />
             <span className="self-center text-3xl font-bold whitespace-nowrap text-cyan-500">
               LogailiC
@@ -60,8 +54,8 @@ const Sidebar = () => {
 
           <ul className="space-y-2 font-medium">
             <li>
-              <a
-                href="/Home"
+              <Link
+                to="/"
                 className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
               >
                 <svg
@@ -75,11 +69,11 @@ const Sidebar = () => {
                   <path d="M12.5 0c-.157 0-.311.01-.565.027A1 1 0 0 0 11 1.02V10h8.975a1 1 0 0 0 1-.935c.013-.188.028-.374.028-.565A8.51 8.51 0 0 0 12.5 0Z" />
                 </svg>
                 <span className="ms-3">Dashboard</span>
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="/"
+              <Link
+                to="/Schedule"
                 className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
               >
                 <svg
@@ -97,13 +91,12 @@ const Sidebar = () => {
                     clipRule="evenodd"
                   />
                 </svg>
-
                 <span className="flex-1 ms-3 whitespace-nowrap">Schedule</span>
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="#"
+              <Link
+                to="/Inbox"
                 className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
               >
                 <svg
@@ -126,13 +119,19 @@ const Sidebar = () => {
                     clipRule="evenodd"
                   />
                 </svg>
-
                 <span className="flex-1 ms-3 whitespace-nowrap">Inbox</span>
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="/"
+              <ConnectButton
+                chainStatus="icon"
+                accountStatus="none"
+                label="Sign in"
+              />
+            </li>
+            <li>
+              <Link
+                to="/Employee"
                 className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
               >
                 <svg
@@ -146,31 +145,13 @@ const Sidebar = () => {
                 >
                   <path
                     fillRule="evenodd"
-                    d="M9 4a4 4 0 1 0 0 8 4 4 0 0 0 0-8Zm-2 9a4 4 0 0 0-4 4v1a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-1a4 4 0 0 0-4-4H7Zm8-1a1 1 0 0 1 1-1h1v-1a1 1 0 1 1 2 0v1h1a1 1 0 1 1 0 2h-1v1a1 1 0 1 1-2 0v-1h-1a1 1 0 0 1-1-1Z"
+                    d="M9 4a4 4 0 1 0 0 8 4 4 0 0 0 0-8Zm-2 9a4 4 0 0 0-4 4v2a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-2a4 4 0 0 0-4-4H7Zm7.172-1.172a3 3 0 1 1 1.415 1.414 4.978 4.978 0 0 1-1.415-1.414ZM14 15a3.98 3.98 0 0 1 3.445 2H19a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1h-6v-2a3.98 3.98 0 0 1 1-2.614V15Z"
                     clipRule="evenodd"
                   />
                 </svg>
-
-                <span className="flex-1 ms-3 whitespace-nowrap">Add Karyawan</span>
-              </a>
+                <span className="flex-1 ms-3 whitespace-nowrap">Employee</span>
+              </Link>
             </li>
-
-            <li>
-              <ConnectButton
-                chainStatus="icon"
-                accountStatus="none"
-                label="Sign in"
-              />
-            </li>
-
-            {/* <li>
-              <a
-                href="#"
-                className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
-              >
-                <span className="flex-1 ms-3 whitespace-nowrap">Sign Up</span>
-              </a>
-            </li> */}
           </ul>
         </div>
       </aside>
