@@ -37,9 +37,8 @@ const Sidebar = () => {
       {/* Sidebar */}
       <aside
         id="logo-sidebar"
-        className={`fixed top-0 left-0 z-40 w-64 h-screen transition-transform ${
-          isOpen ? "translate-x-0" : "-translate-x-full"
-        } sm:translate-x-0`}
+        className={`fixed top-0 left-0 z-40 w-64 h-screen transition-transform ${isOpen ? "translate-x-0" : "-translate-x-full"
+          } sm:translate-x-0`}
         aria-label="Sidebar"
       >
         <div className="h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-950">
@@ -61,7 +60,7 @@ const Sidebar = () => {
           <ul className="space-y-2 font-medium">
             <li>
               <a
-                href="/"
+                href="/admin"
                 className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
               >
                 <svg
@@ -77,7 +76,7 @@ const Sidebar = () => {
                 <span className="ms-3">Dashboard</span>
               </a>
             </li>
-            <li>
+            {/* <li>
               <a
                 href="/E"
                 className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
@@ -100,7 +99,7 @@ const Sidebar = () => {
 
                 <span className="flex-1 ms-3 whitespace-nowrap">Schedule</span>
               </a>
-            </li>
+            </li> */}
             <li>
               <a
                 href="#"
@@ -132,8 +131,8 @@ const Sidebar = () => {
             </li>
             <li>
               <a
-                href="/Employee"
-                className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+                href="/admin/employee"
+                className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group mb-12"
               >
                 <svg
                   className="w-[20px] h-[20px] text-gray-800 dark:text-white"
@@ -155,7 +154,7 @@ const Sidebar = () => {
               </a>
             </li>
 
-            <li>
+            <li className="flex justify-center">
               <ConnectButton
                 chainStatus="icon"
                 accountStatus="none"
