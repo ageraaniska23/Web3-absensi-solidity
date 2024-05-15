@@ -42,7 +42,7 @@ const SideBarEmployee = () => {
                     } sm:translate-x-0`}
                 aria-label="Sidebar"
             >
-                <div className="flex flex-col items-center h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-neutral-300">
+                <div className="flex flex-col items-center h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-neutral-100">
                     <a
                         // href="https://flowbite.com/"
                         className="flex items-center ps-2.5 mb-5"
