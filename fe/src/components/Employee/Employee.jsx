@@ -2,8 +2,8 @@ import React from 'react'
 
 const Employee = () => {
     return (
-        <div className='p-4 sm:ml-64 bg-neutral-100'>
-            <div className='p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700 '>
+        <div className='p-4 sm:ml-64 bg-slate-100'>
+            <div className='p-4 border-2 border-gray-200 rounded-lg dark:border-gray-700 '>
                 <form>
                     <div className="space-y-12">
                         <div className="border-b border-gray-900/10 pb-12">

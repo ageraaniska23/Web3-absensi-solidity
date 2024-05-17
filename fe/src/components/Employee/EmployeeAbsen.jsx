@@ -1,14 +1,8 @@
-// import React from 'react';
-// import Background from '../../asset/workk.jpg'
+
 
 const EmployeeAbsen = () => {
     return (
         <div className='p-4 sm:ml-64 bg-slate-200'
-            // style={{
-            //     backgroundImage: ` linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(${Background})`,
-            //     backgroundSize: "cover",
-            //     backgroundPosition: "center",
-            // }}
         >
             <div className='p-4'>
                 {/* <h1 className='text-center text-4xl text-gray-950 font-bold italic'>SELAMAT DATANG DAN SELAMAT BEKERJA</h1> */}

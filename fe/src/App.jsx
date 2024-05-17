@@ -17,7 +17,7 @@ function App() {
         <div className="main-content">
           <Routes>
             <Route exact path="/" element={<EmployeeAbsen />} />
-            <Route exact path="/admin" element={<Home />} />
+            <Route exact path="/admin/dashboard" element={<Home />} />
             <Route exact path="/admin/schedule" element={<Schedule />} />
             <Route exact path="/admin/employee" element={<Employee />} />
           </Routes>

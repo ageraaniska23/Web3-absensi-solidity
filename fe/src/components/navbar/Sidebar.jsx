@@ -51,7 +51,7 @@ const Sidebar = () => {
               className="h-6 me-3 sm:h-7"
               alt=" Logo"
             />
-            <span className="self-center text-3xl font-bold whitespace-nowrap text-cyan-500">
+            <span className="self-center text-3xl font-bold whitespace-nowrap text-sky-700">
               LogailiC
             </span>
             <Theme />
@@ -60,7 +60,7 @@ const Sidebar = () => {
           <ul className="space-y-2 font-medium">
             <li>
               <a
-                href="/admin"
+                href="/admin/dashboard"
                 className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
               >
                 <svg
